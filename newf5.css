@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #E9F1FA;
+}
+header{
+    width: 100%;
+    background: #00ABE4;
+    margin-bottom: 30px;
+
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    box-shadow: 0 1px 4px 2px black;
+    z-index: 1;
+}
+header h1{
+    padding: 15px 0;
+    padding-left: 45px;
+}
+main{
+    width: 100%;
+    z-index: 0;
+}
+
+main .box{
+    width: 65%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+main .box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+main .box div{
+    position: relative;
+    background-color: red;
+}
+main .box div .title{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(10, 10, 255, 0.2);
+    color: white;
+
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+
+    /* display: none; */
+}
+.title h1{
+    font-size: 3rem;
+}
+.title:hover h1{
+    font-size: 4rem;
+    transition: 50ms linear;
+}
+main .box div .title:hover{
+    background: rgba(10, 10, 255, 0.3);
+
+}
+@media (width <= 700px){
+    header{
+        margin-bottom: 15px;
+    }
+    header h1{
+        padding-left: 15px;
+    }
+    main .box{
+        width: 90%;
+        gap: 15px;
+    }
+    .title h1{
+        font-size: 2rem;
+    }
+    .title:hover h1{
+        font-size: 3rem;
+        transition: 50ms linear;
+    }
+}
