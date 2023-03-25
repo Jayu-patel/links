@@ -41,7 +41,6 @@ main .box img{
 }
 main .box div{
     position: relative;
-    background-color: red;
 }
 main .box div .title{
     position: absolute;
