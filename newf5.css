@@ -83,7 +83,7 @@ main .box div .title:hover{
         font-size: 2rem;
     }
     .title:hover h1{
-        font-size: 3rem;
+        font-size: 2rem;
         transition: 50ms linear;
     }
 }
