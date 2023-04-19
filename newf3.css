@@ -1,0 +1,831 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&family=Ubuntu&display=swap');
+
+:root {
+    --col1: #F5EAEA;
+    --col2: #FFB84C;
+    --col3: #F16767;
+    --col4: #A459D1;
+    --col5: #E9F1FA;
+    --col6: #00ABE4;
+    --col7: #0A1828;
+}
+/*
+Colors used: Light blue (#E9F1FA), 
+bright blue (#00ABE4), 
+white (#FFFFFF)*/
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    color: var(--col7);
+    background-color: var(--col5);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#nav {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    box-shadow: 0px 2px 4px 2px #111;
+}
+
+.navigation {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background: var(--col6);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.navigation .logo {
+    padding: 10px 0 10px 40px;
+    font-family: 'Alfa Slab One', cursive;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.logo h1 {
+    color: white;
+    font-size: 3.2rem;
+}
+
+.navigation .nav_links {
+    font-size: 1.1rem;
+    font-weight: 500;
+    width: 45%;
+    height: 100%;
+    margin: auto 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navigation a:link,
+.navigation a:active,
+.navigation a:visited {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+li {
+    list-style: none;
+}
+
+/* li::after {
+    content: "";
+    width: 0%;
+    height: 3px;
+    display: block;
+    margin: auto;
+    background: var(--col4);
+    transition: 300ms;
+}
+
+li:hover::after {
+    width: 100%;
+} */
+
+.btn {
+    display: none;
+}
+
+.btn button {
+    padding: 8px 12px;
+    color: var(--col6);
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(255, 255, 255, 1);
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#closebtn {
+    display: none;
+    padding: 8px 14px;
+}
+
+.sec {
+    display: flex;
+    height: calc(100vh - 77px);
+    overflow: hidden;
+    position: relative;
+}
+
+.square_shape {
+    z-index: -1;
+    position: absolute;
+    opacity: 0;
+}
+
+.line {
+    margin: auto;
+    width: 90%;
+    height: 1px;
+    background-color: #111;
+    color: white;
+}
+
+.sec1 {
+    flex: 1;
+    padding-top: 90px;
+    font-weight: 700;
+}
+
+.title {
+    font-size: 4rem;
+    padding: 0 0 15px 80px;
+}
+
+#name {
+    color: var(--col6);
+}
+
+.t2 {
+    font-size: 2.5rem;
+    padding: 1px 1px 25px 80px;
+}
+
+.sec p {
+    font-size: 1.2rem;
+    width: 70%;
+    padding: 10px 0 20px 80px;
+}
+
+.btns {
+    padding: 10px 80px;
+}
+
+.btns button {
+    cursor: pointer;
+    outline: none;
+    border: 2px solid var(--col6);
+    padding: 14px 18px;
+    border-radius: 5px;
+    color: white;
+    background: var(--col6);
+}
+
+.btns button:last-child {
+    margin-left: 10px;
+    color: var(--col6);
+    background: var(--col5);
+    border: 2px solid var(--col6);
+}
+
+.btns button:hover:first-child {
+    color: var(--col6);
+    background: var(--col5);
+    border: 2px solid var(--col6);
+    transition: 0.5s;
+}
+
+.btns button:hover:last-child {
+    color: var(--col5);
+    background: var(--col6);
+    transition: 0.5s;
+}
+
+.sec2 {
+    flex: 1;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.sec2 img {
+    width: 100%;
+    z-index: 0;
+    margin: -80px 0 0 -80px;
+}
+
+.skills {
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+}
+
+.dots.one {
+    width: 300px;
+    z-index: -1;
+    position: absolute;
+    top: 5rem;
+    right: -3rem;
+    transform: rotate(15deg);
+    opacity: 0.2;
+}
+
+.dots.two {
+    width: 300px;
+    z-index: -1;
+    position: absolute;
+    bottom: 6rem;
+    left: -4rem;
+    transform: rotate(30deg);
+    opacity: 0.2;
+}
+
+.skills .nav1,
+.qualification .head-part,
+.project .head-part,
+.contact .main_sec1 {
+    padding-top: 120px;
+    width: 100%;
+    text-align: center;
+}
+
+.skills h1,
+.qualification h1,
+.project h1,
+.contact h1 {
+    font-size: 2.5rem;
+}
+
+.skills .nav1 p,
+.skills p,
+.qualification .head-part p,
+.contact .main_sec1 p {
+    font-size: 1.2rem;
+}
+
+.skills .nav1 p,
+.qualification .head-part p,
+.project .head-part p,
+.project .project-box p,
+.work p,
+.edu p,
+.contact .main_sec1 p,
+.contact .box .main_sec2 .box1 p{
+    color: rgba(90, 90, 90, 0.8);
+}
+
+.skills-sec,
+.qualification .edu-work {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    padding-top: 40px;
+    gap: 60px;
+}
+
+.skills-sec .nav2,
+.qualification .nav3 {
+    text-align: center;
+}
+
+.frontend,
+.backend,
+.edu,
+.work {
+    color: black;
+    padding: 40px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(15px);
+    box-shadow: 0px 0px 2px 1px #111,
+        10px 10px 20px -10px black;
+}
+
+.frontend,
+.backend,
+.edu,
+.work {
+    flex: 1;
+}
+
+.frontend .frontend-skills,
+.backend .backend-skills {
+    padding-top: 50px;
+    width: 50%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    text-align: center;
+}
+
+.frontend .frontend-skills .f-img,
+.backend .backend-skills .b-img {
+    padding: 15px 0;
+}
+
+.frontend img,
+.backend img {
+    width: 60px;
+}
+
+.qualification .head-part,
+.project .head-part {
+    padding-bottom: 40px;
+}
+
+.qualification {
+    position: relative;
+    width: 100vw;
+    overflow: hidden;
+    padding-bottom: 60px;
+}
+
+.all_shape {
+    width: 300px;
+    z-index: -1;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    bottom: -1rem;
+    transform: rotate(15deg);
+    opacity: 0.2;
+}
+
+.qualification .edu-work {
+    padding-top: 0px;
+}
+
+.edu-box,
+.work-box {
+    padding-top: 45px;
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 45px;
+    margin-left: 31%;
+}
+
+.edu-work h3 {
+    padding-bottom: 8px;
+}
+
+.edu-work p {
+    padding-bottom: 4px;
+}
+
+.project {
+    height: 100vh;
+    width: 100%;
+}
+
+.project .project-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px -10px black;
+}
+
+.project .project-box {
+    width: 70%;
+    margin: 0 auto;
+    gap: 30px;
+    display: flex;
+    padding-bottom: 3rem;
+}
+
+.project .project-box .project1 {
+    flex: 1;
+}
+
+.project .project-box .project1 p {
+    padding: 10px 0;
+}
+
+.project .project-box .project1 h3 {
+    padding-bottom: 3px;
+}
+
+.project .project-box .project1 .image {
+    aspect-ratio: 16/9;
+}
+
+.project a:link,
+.project a:active,
+.project a:visited,
+.contact a:link,
+.contact a:active,
+.contact a:visited{
+    text-decoration: none;
+    color: var(--col7);
+}
+
+#box {
+    display: none;
+    width: 90%;
+    min-height: 50vh;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+#box button {
+    padding: 10px 14px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.05rem;
+    color: var(--col1);
+    background: var(--col6);
+}
+
+.square_shape,
+.dots {
+    animation: rotate1 100s linear infinite;
+}
+
+.dots.two,
+.all_shape {
+    animation: rotate1 100s linear infinite reverse;
+}
+.contact{
+    width: 100%;
+    height: 100vh ;
+}
+.contact .box{
+    width: 80%;
+    height: 100vh;
+    margin: 0 auto;
+}
+.contact .box .main_sec2{
+    width: 100%;
+    display: flex;
+    padding-top: 30px;
+}
+.contact .box .main_sec2 .box1,
+.contact .box .main_sec2 .box2{
+    flex: 1;
+    padding: 10px 20px;
+}
+.contact .box .main_sec2 .box1 h3{
+    padding: 5px 0;
+}
+.contact .box .main_sec2 .box1 .inner_box .title1,
+.contact .box .main_sec2 .box2 .inner_box .title1{
+    text-align: center;
+    padding-bottom: 20px;
+}
+.email,.whatsapp,.messanger{
+    padding: 30px 0 30px 100px;
+}
+.email{
+    padding: 10px 0;
+    padding-left: 100px;
+    color: black;
+}
+.form{
+    position: relative;
+}
+.form1{
+    position: relative;
+    height: 70px;
+    margin-bottom: 40px;
+}
+.form1:last-child{
+    height: 180px;
+    margin-bottom: 10px;
+}
+textarea{
+    resize: none;
+}
+.input_box{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgba(0, 0, 0, 0.9);
+    border-radius: 30px;
+    padding: 20px;
+    outline: none;
+    font-family: 'Ubuntu', sans-serif;
+    z-index: 1;
+    font-size: 1rem ;
+    background: transparent;
+}
+.tage_name{
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    background: var(--col5);
+    z-index: 2;
+    padding: 5px;
+}
+#sub_btn{
+    cursor: pointer;
+    outline: none;
+    padding: 10px 12px;
+    margin-left: 15px;
+    color: var(--col6);
+    background: white;
+    border: 2px solid var(--col6);
+    border-radius: 5px;
+}
+#sub_btn:hover{
+    color: var(--col5);
+    background: var(--col6);
+    transition: 0.5s;
+}
+#result_text{
+    margin-left: 10px;
+}
+.red{
+    color: red;
+}
+.green{
+    color: green;
+}
+@keyframes car {
+    0%{
+        background: hsl(200, 20%, 70%);
+    }
+    100%{
+        background: hsl(200, 20%, 95%);
+    }
+    
+}
+
+@media (width > 1000px) {
+    li::after {
+        content: "";
+        width: 0%;
+        height: 3px;
+        display: block;
+        margin: auto;
+        background: var(--col5);
+        transition: 300ms;
+    }
+
+    li:hover::after {
+        width: 100%;
+    }
+    .skills {
+        height: 100vh;
+    }
+}
+@media (width > 800px) and (height < 450px){
+    .sec, .skills, .project{
+        height: auto;
+    }
+}
+@media (width < 400px) and (height < 600px){
+    .sec{
+        height: auto;
+    }
+}
+@media (width > 1000px) and (height < 600px){
+    .sec, .skills, .project{
+        height: auto;
+    }
+    .btns {
+        padding-bottom: 60px;
+    }
+    .skills-sec{
+        padding-bottom: 60px;
+    }
+}
+
+@media (height < 900px) {
+    .square_shape {
+        width: 300px;
+        z-index: -2;
+        position: absolute;
+        bottom: -5rem;
+        left: -4rem;
+        transform: rotate(30deg);
+        opacity: 0.2;
+    }
+}
+
+@media (width <=1000px) {
+    #parent_box{
+        flex-direction: column;
+        height: auto;
+    }
+    .dots.one {
+        top: 16rem;
+        right: -3rem;
+    }
+
+    .dots.two {
+        bottom: 6rem;
+        left: -4rem;
+    }
+
+    .square_shape {
+        width: 300px;
+        z-index: -1;
+        position: absolute;
+        bottom: -1rem;
+        left: -4rem;
+        transform: rotate(30deg);
+        opacity: 0.2;
+    }
+
+    .logo h1 {
+        font-size: 2.6rem;
+    }
+
+    .btn {
+        display: block;
+        position: absolute;
+        top: 16px;
+        right: 30px;
+    }
+
+    .nav_links a {
+        display: none;
+        padding: 20px;
+    }
+
+    .navigation .nav_links {
+        padding: 0 0 380px 0;
+        position: absolute;
+        background: white;
+        top: 74px;
+        right: 0;
+        height: 100%;
+        width: 0px;
+        display: grid;
+        transition: width 0.3s;
+        box-shadow: 25px 25px 80px -35px black;
+    }
+
+    .navigation .nav_links .alink {
+        color: var(--col7);
+        width: 200px;
+    }
+
+    .navigation .nav_links .alink:hover {
+        color: white;
+        background: var(--col6);
+        transition: 0.3s;
+    }
+
+    .title {
+        font-size: 3rem;
+    }
+
+    .t2 {
+        font-size: 2rem;
+    }
+
+    .sec p {
+        font-size: 1rem;
+    }
+
+
+    .skills {
+        height: auto;
+        padding-top: 77px;
+        padding-bottom: 70px;
+    }
+
+    .skills .nav1 {
+        padding-top: 60px;
+    }
+
+    .skills-sec {
+        flex-direction: column;
+    }
+
+    .frontend,
+    .backend {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .frontend .frontend-skills,
+    .backend .backend-skills {
+        padding-top: 30px;
+        width: 100%;
+    }
+
+    .sec1 {
+        flex: 1;
+        padding-top: 40px;
+    }
+
+    .sec2 {
+        flex: 0;
+    }
+
+    .sec p {
+        width: 85%;
+    }
+
+    .title,
+    #name,
+    .t2,
+    .sec p,
+    .btns {
+        padding-left: 25px;
+    }
+
+    .qualification {
+        height: auto;
+    }
+
+    .qualification .edu-work {
+        width: 75%;
+        flex-direction: column;
+        padding-top: 10px;
+    }
+
+    .qualification .head-part {
+        padding-bottom: 18px;
+    }
+
+    .edu-work .work {
+        padding-top: 50px;
+    }
+
+    .edu-work .edu-box,
+    .edu-work .work-box {
+        padding-top: 30px;
+        margin-left: 0;
+    }
+
+    .project {
+        height: auto;
+        overflow: hidden;
+    }
+
+    .project .project-box {
+        padding-top: 10px;
+        flex-direction: column;
+        padding-bottom: 40px;
+    }
+
+    .project .project-box .project1 p {
+        padding: 10px 0;
+        padding-top: 12px;
+    }
+
+    .project .project-box .project1 h3 {
+        padding-bottom: 5px;
+    }
+    .contact .box .main_sec2 .box2 .inner_box .title1{
+        padding-bottom: 60px;
+    }
+    .contact .box .main_sec2 .box2{
+        padding-bottom: 80px;
+    }
+    .contact,.contact .box{
+        height: auto;
+    }
+    .contact .box .main_sec2 .box1 .inner_box,
+    .contact .box .main_sec2 .box2 .inner_box{
+        padding-top: 50px;
+    }
+    .contact .box .main_sec2{
+        flex-direction: column;
+    }
+    .email,.whatsapp,.messanger{
+    padding-left: 0;
+}
+}
+
+/* (width < 950px) and  */
+@media (width < 950px) and (orientation: landscape) {
+    .square_shape {
+        width: 300px;
+        z-index: -1;
+        position: absolute;
+        bottom: -1rem;
+        left: 80%;
+        transform: rotate(30deg);
+        opacity: 0.2;
+    }
+
+    .project {
+        height: auto;
+        overflow: visible;
+    }
+
+    .project .project1.project2 {
+        padding-bottom: 60px;
+    }
+}
+
+@media (height < 375px) {
+    .sec {
+        height: auto;
+    }
+}
+@media (width < 340px){
+    .frontend .frontend-skills,
+    .backend .backend-skills {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@keyframes rotate1 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
