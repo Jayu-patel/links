@@ -68,7 +68,7 @@ main .box div .title:hover{
     background: rgba(10, 10, 255, 0.3);
 
 }
-@media (width <= 700px){
+@media (max-width: 700px){
     header{
         margin-bottom: 15px;
     }
